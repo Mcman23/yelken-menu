@@ -10,7 +10,7 @@ document.documentElement.lang = initialLang();
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
       <Routes>
         <Route path="/menu" element={<Menu />} />
         <Route path="/admin" element={<Admin />} />
