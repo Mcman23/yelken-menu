@@ -17,7 +17,7 @@ export default function Photo({ src, alt, focusX = 50, focusY = 50, eager = fals
           onError={() => setFailed(true)}
         />
       ) : (
-        <img className="ph-mark" src={import.meta.env.BASE_URL + "logo.svg"} alt="" aria-hidden="true" style={{ opacity: .38 }} />
+        <img className="ph-mark" src={import.meta.env.BASE_URL + "logo.png"} alt="" aria-hidden="true" style={{ opacity: .38 }} />
       )}
     </div>
   );
