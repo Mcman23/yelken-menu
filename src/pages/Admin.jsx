@@ -219,7 +219,7 @@ export default function Admin() {
     return (
       <div style={{ minHeight: '100vh', display: 'grid', placeItems: 'center', padding: 20 }}>
         <form onSubmit={submitAuth} style={{ width: '100%', maxWidth: 420, background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 16, padding: 22 }}>
-          <img src="/logo.svg" alt="Yelkən" style={{ height: 40, marginBottom: 14 }} />
+          <img src={import.meta.env.BASE_URL + "logo.svg"} alt="Yelkən" style={{ height: 40, marginBottom: 14 }} />
           <h1 style={{ fontSize: 24, marginBottom: 4 }}>{isSetup ? 'Первый администратор' : 'Вход в панель'}</h1>
           <p style={{ fontSize: 13, color: 'var(--muted)', marginTop: 0, marginBottom: 18 }}>
             {isSetup
@@ -254,7 +254,7 @@ export default function Admin() {
     <div style={{ minHeight: '100vh', paddingBottom: 40 }}>
       <header style={{ background: 'var(--surface)', borderBottom: '1px solid var(--border)', position: 'sticky', top: 0, zIndex: 20 }}>
         <div className="wrap" style={{ display: 'flex', alignItems: 'center', gap: 10, height: 58 }}>
-          <img src={data.settings?.logoUrl || '/logo.svg'} alt="Yelkən" style={{ height: 26 }} />
+          <img src={data.settings?.logoUrl || (import.meta.env.BASE_URL + 'logo.svg')} alt="Yelkən" style={{ height: 26 }} />
           <span style={{ fontSize: 12, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--sea)' }}>Admin</span>
           <div style={{ marginLeft: 'auto', display: 'flex', gap: 6 }}>
             <a className="btn btn-sm" href="/menu">Меню</a>

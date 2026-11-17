@@ -119,7 +119,7 @@ export default function Menu() {
       <header className="hdr">
         <div className="wrap hdr-in">
           <a className="brand" href="/menu" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-            {logoUrl ? <img src={logoUrl} alt={logoMark} /> : <img src="/logo.svg" alt={logoMark} />}
+            {logoUrl ? <img src={logoUrl} alt={logoMark} /> : <img src={import.meta.env.BASE_URL + "logo.svg"} alt={logoMark} />}
             <span className="brand-txt">
               <span className="brand-sub">{s.tagline || 'Şüvəlan'}</span>
             </span>
